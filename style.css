@@ -8,6 +8,14 @@
     src: url(fonts/Patrick_Hand_SC/PatrickHandSC-Regular.ttf);
 }
 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    overscroll-behavior: none;
+}
+
 h1 {
     font-family: irish;
     font-size: 40px;
@@ -16,12 +24,30 @@ h1 {
 h2 {
     font-family: patrick;
     text-shadow: 2px 2px rgba(63, 126, 198, 0.5);
+    margin-top: 5px;
+   
+}
+
+hr {
+    filter:blur(2px);
+    height: 4px;
+    background-color: rgba(0, 145, 217, 0.35);
+    border: none;
+    margin-top: none;
 }
 
 p {
     font-family: patrick;
-    font-size: 20px;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 body {
     background-image: url(images/sky.png);
@@ -29,63 +55,405 @@ body {
     background-attachment: fixed;
     margin: 0px;
     padding: 0px;
+    height: 100vh;
+    max-width: 100%;
 }
 
-#top {
+#title {
+    position: relative;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px rgba(0, 145, 217, 0.85);
+    text-decoration: none;
+}
+
+/*#top {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 20px;
+    width: 100vw;
+    box-sizing: border-box;
+    top: 0;
+    position: absolute;
+}*/
+
+/*#anim {
+    position: relative;
+    top: 0;
+    animation: slideLeft linear;
+    animation-timeline: scroll(self);
+    animation-duration: 1ms;
+    animation-fill-mode: forwards;
+
 }
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0) scale(1);
+    }
+
+    100% {
+        transform: translateX(-35vw) scale(0.5);
+    }
+}*/
+
+
+/*DROPDOWN MENU*/
+
+#dropdown {
+    position: relative;
+}
+
+#dropdownbtn {
+
+    padding-top: 40px;
+    cursor: pointer;
+}
+
+#dropdownmenu {
+    /*border: solid;*/
+    display: none;
+    position: absolute;
+    bottom: 190px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 25px;
+    padding: 12px;
+    left: -3px;
+}
+
+#arrow {
+    display: none;
+    position: fixed;
+    padding: 0px;
+    margin: 0px;
+    bottom: 173px;
+    left: 85px;
+
+    width: 0px;
+    height: 0px;
+    border-left: 1px solid transparent;
+    border-right: 10px solid transparent;
+
+    border-top: 20px solid rgba(255, 255, 255, 1);
+}
+
+#dropdown:hover #dropdownmenu,
+#dropdown:hover #arrow {
+    display: block;
+}
+
+.border {
+    display: flex;
+    flex-direction: row;
+    align-content: end;
+    margin: 0px;
+    gap: 0px;
+    box-sizing: border-box;
+    bottom: 0;
+    position: fixed;
+
+}
+
+/*MENU BUTTONS*/
+
+.button:hover {
+    text-shadow: none;
+}
+
 
 .button {
     font-family: patrick;
     font-size: 30px;
-    text-shadow: 2px 2px rgba(63, 126, 198, 0.5);
+    text-shadow: 2px 2px rgba(141, 174, 209, 0.5);
     text-decoration: solid;
     color: black;
+    transition: 1ms;
 }
 
 .shadow {
     text-shadow: 2px 2px rgba(63, 126, 198, 0.5);
 }
 
+/*COMIC GALLERY*/
+
 #img-gallery {
-    size: 440px;
+    /*size: 440px;*/
     gap: 40px;
     display: flex;
     flex-flow: column;
     align-items: center;
+
+    min-width: 0;
+    height: auto;
+    padding-bottom: 50px;
 }
 
-#title {
-    display: flex;
-    justify-content: center;
 
-    font-size: 50px;
-    color: rgb(255, 255, 255);
-    text-shadow: 3px 3px rgb(63, 126, 198);
-    text-decoration: none;
-}
+/*ABOUT*/
 
-#about {
-    display: flex;
-    flex-direction: flex-end;
-    
-    font-family: patrick;
-    font-size: 30px;
-    text-shadow: 2px 2px rgba(63, 126, 198, 0.5);
-    text-decoration: solid;
-    color: black;
-}
+.credit {
+    position: sticky;
+    top: 0;
 
-#credit {
-    display: flex;
-    justify-content: center;
     text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border: dashed black;
+    padding: 5px;
+    margin: 0px;
+    
+
     font-family: patrick;
     font-size: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+   
+}
+
+.line {
+    position: sticky;
+    top:40px;
+
+    filter:blur(3px);
+    height: 6px;
+    background-color: rgba(0, 145, 217, 0.5);
+    border: none;
+}
+
+#first-encounter-date:hover {
+    background-color: yellow;
+}
+
+#reveal-date:hover {
+    background-color: yellow;
+}
+
+.characters {
+    display: flex;
+    position: center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.friendship {
+    display: flex;
+    position: center;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 210px;
+    margin-right: 210px;
+    padding-bottom: 50px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    
+    border-radius: 25px;
+    border: solid black;
+    padding: 60px;
+
+    font-family: patrick;
+    font-size: 30px;
+}
+
+
+/*TIMELINE*/
+
+/*TICK MARKS*/
+
+.tick-contain {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.tick {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 270px;
+    top: 243px;
+}
+
+.tick-two {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 315px;
+    top: 240px;
+}
+
+.tick-three {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 400px;
+    top: 246px;
+}
+
+.tick-four {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 445px;
+    top: 246px;
+}
+
+.tick-five {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 489px;
+    top: 246px;
+}
+
+.tick-six {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 534px;
+    top: 246px;
+}
+
+.tick-seven {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 849px;
+    top: 248px;
+}
+
+.tick-eight {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 1130px;
+    top: 245px;
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+#timeline {
+    position: absolute;
+    top: 218px;
+}
+
+/*#flower {
+    display: none;
+    position: relative;  
+}
+
+#six-seven:hover #flower{
+    display: block;
+}*/
+
+
+/*YEAR NUMBERS*/
+
+#six-seven:hover {
+    background-color: yellow;
+}
+
+#six-eight:hover {
+    background-color: yellow;
+}
+
+#seven:hover {
+    background-color: yellow;
+}
+
+#seven-one:hover {
+    background-color: yellow;
+}
+
+#seven-two:hover {
+    background-color: yellow;
+}
+
+#seven-three:hover {
+    background-color: yellow;
+}
+
+#eight:hover {
+    background-color: yellow;
+}
+
+#nine:hover {
+    background-color: yellow;
+}
+
+.years {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    transition: 1ms;
+}
+
+#six-seven {
+    position: absolute;
+    left: 283px;
+    top: 280px;
+}
+
+#six-eight {
+    position: absolute;
+    left: 330px;
+    top: 195px;
+
+}
+
+#seven {
+    position: absolute;
+    left: 410px;
+    top: 288px;
+}
+
+#seven-one {
+    position: absolute;
+    left: 457px;
+    top: 200px;
+}
+
+#seven-two {
+    position: absolute;
+    left: 500px;
+    top: 285px;
+}
+
+#seven-three {
+    position: absolute;
+    left: 545px;
+    top: 200px;
+}
+
+#eight {
+    position: absolute;
+    left: 858px;
+    top: 285px;
+}
+
+#nine {
+    position: absolute;
+    left: 1140px;
+    top: 285px;
 }
