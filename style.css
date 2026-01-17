@@ -17,15 +17,28 @@ html {
 }
 
 h1 {
-    font-family: irish;
+    font-family: irish, Arial, Helvetica, sans-serif;
     font-size: 40px;
 }
 
 h2 {
-    font-family: patrick;
-    text-shadow: 2px 2px rgba(63, 126, 198, 0.5);
+    font-family: patrick, Courier, monospace;
+    text-shadow: 1px 2px rgba(64, 169, 221, 0.6);
     margin-top: 5px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 8px;
+    border-radius: 25px;
    
+}
+
+.about-title {
+    background-color: none;
+    text-shadow: 2px 2px rgba(80, 154, 190, 0.6);
+    border: none;
+    padding: 0px;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 hr {
@@ -37,7 +50,7 @@ hr {
 }
 
 p {
-    font-family: patrick;
+    font-family: patrick, Courier, monospace;
     font-size: 30px;
     text-decoration: none;
     color: black;
@@ -55,8 +68,8 @@ body {
     background-attachment: fixed;
     margin: 0px;
     padding: 0px;
-    height: 100vh;
     max-width: 100%;
+    overflow-x: hidden;
 }
 
 #title {
@@ -120,7 +133,6 @@ body {
 }
 
 #dropdownbtn {
-
     padding-top: 40px;
     cursor: pointer;
 }
@@ -179,7 +191,7 @@ body {
 .button {
     font-family: patrick;
     font-size: 30px;
-    text-shadow: 2px 2px rgba(141, 174, 209, 0.5);
+    text-shadow: 2px 2px rgba(80, 154, 190, 0.5);
     text-decoration: solid;
     color: black;
     transition: 1ms;
@@ -216,14 +228,14 @@ body {
     border: dashed black;
     padding: 5px;
     margin: 0px;
+    box-shadow: 0px 1px 5px 3px rgba(25, 140, 197, 0.5);
     
-
     font-family: patrick;
     font-size: 20px;
    
 }
 
-.line {
+/*.line {
     position: sticky;
     top:40px;
 
@@ -231,14 +243,16 @@ body {
     height: 6px;
     background-color: rgba(0, 145, 217, 0.5);
     border: none;
-}
+}*/
 
 #first-encounter-date:hover {
     background-color: yellow;
+    text-shadow: 1px 1px rgb(255, 48, 48, 0.6);
 }
 
 #reveal-date:hover {
     background-color: yellow;
+    text-shadow: 1px 1px rgb(255, 48, 48, 0.6);
 }
 
 .characters {
@@ -382,34 +396,59 @@ body {
 
 #six-seven:hover {
     background-color: yellow;
+    text-shadow: 1px 1px rgb(255, 48, 48, 0.6);
+    border-radius: 25px;
+    padding: 1px;
 }
 
 #six-eight:hover {
     background-color: yellow;
+    text-shadow: 1px 1px rgb(255, 48, 48, 0.6);
+    border-radius: 25px;
+    padding: 1px;
+    
 }
 
 #seven:hover {
     background-color: yellow;
+    text-shadow: 1px 1px rgb(255, 48, 48, 0.6);
+    border-radius: 25px;
+    padding: 1px;
 }
 
 #seven-one:hover {
     background-color: yellow;
+    text-shadow: 1px 1px rgb(255, 48, 48, 0.6);
+    border-radius: 25px;
+    padding: 1px;
 }
 
 #seven-two:hover {
     background-color: yellow;
+    text-shadow: 1px 1px rgb(255, 48, 48, 0.6);
+    border-radius: 25px;
+    padding: 1px;
 }
 
 #seven-three:hover {
     background-color: yellow;
+    text-shadow: 1px 1px rgb(255, 48, 48, 0.6);
+    border-radius: 25px;
+    padding: 1px;
 }
 
 #eight:hover {
     background-color: yellow;
+    text-shadow: 1px 1px rgb(255, 48, 48, 0.6);
+    border-radius: 25px;
+    padding: 1px;
 }
 
 #nine:hover {
     background-color: yellow;
+    text-shadow: 1px 1px rgb(255, 48, 48, 0.6);
+    border-radius: 25px;
+    padding: 1px;
 }
 
 .years {
